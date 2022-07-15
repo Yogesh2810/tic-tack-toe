@@ -78,6 +78,12 @@ public class TwoPlayer {
 		{
 			mat[0]=mat[3];
 		}
+		if(mat[0]!=0)
+		{
+			printboard();
+			System.out.println("Player "+mat[0]+" Won ! Congratulations!");
+			System.exit(turn);
+		}
 		
 	}
 	public static void choice(int k)
@@ -101,12 +107,6 @@ public class TwoPlayer {
 		{
 			choice(turn);
 			checkvictory();
-			if(mat[0]!=0)
-			{
-				printboard();
-				System.out.println("Player "+mat[0]+" Won ! Congratulations!");
-				return;
-			}
 			toggle();
 		}
 
